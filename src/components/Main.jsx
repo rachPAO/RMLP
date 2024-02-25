@@ -3,25 +3,11 @@ export default function Main() {
     <div class="container">
     <h1>Rate My Lab Partner</h1>
 
-    checkEmailExists(email, (err, exists)) => {
+    
       
-    }
 
-//checks if the given email exists in the DB
-function checkEmailExists(email, callback) {
-  db.query(sql, [email], (err, result) => {
-    if (err) {
-      callback(err, null);
-      return;
-    }
-    const count = result[0].count;
-    callback(null, count > 0);
-  });
-}
     
 var reviewList = [];
-
-
 
     <form id="emailForm" onSubmit={() => {
       const hasUser = fetch('http://localhost:4000/find_user')

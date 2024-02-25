@@ -12,7 +12,7 @@ CREATE TABLE review(
     FOREIGN KEY (reviewer) REFERENCES user(email)
     FOREIGN KEY (reviewee) REFERENCES user(email)
 );
-DROP TABLE review;
+
 INSERT INTO review(subject, classCode, reviewer, reviewee, comments, quality, personality, hate, partnerAgain) 
 VALUES ('CS', 2500, 'huskseas@northeastern.edu', 'dong.nelson@northeastern.edu', 'I want that headband!', 5, 100000, -1000, '100% YESSS')
 INSERT INTO review(subject, classCode, reviewer, reviewee, comments, quality, personality, hate, partnerAgain) 

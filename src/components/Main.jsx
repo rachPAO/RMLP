@@ -1,17 +1,23 @@
+import React from 'react';
 import { useState } from "react"
-import { BrowserRouter } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+
 
 export default function Main() {
     const [userFound, setUserFound] = useState([])
+    const navigate = useNavigate()
     async function onSubmit(e) {
       e.preventDefault()
       const hasUser = await (await fetch('http://localhost:4000/find_user?email=dong.nelson@northeastern.edu')).json()
       if (hasUser.count === 1){
         const hasReviews = await (await fetch('http://localhost:4000/find_reviews?email=dong.nelson@northeastern.edu')).json()
         setUserFound(hasReviews)
+        navigate("/Main");
+
+  
       }
       else {
-        
+        navigate("/Error");
       }
       
     }

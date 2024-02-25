@@ -33,21 +33,6 @@ app.get('/find_reviews', (req, res) => {
 
 
 
-
-// //checks if the given email exists in the DB
-// function checkEmailExists(email, callback) {
-//   const sql = 'SELECT COUNT(*) AS count FROM username WHERE email = ?';
-//   db.query(sql, [email], (err, result) => {
-//     if (err) {
-//       callback(err, null);
-//       return;
-//     }
-//     const count = result[0].count;
-//     callback(null, count > 0);
-//   });
-// }
-
-
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

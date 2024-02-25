@@ -1,17 +1,17 @@
 import { useState } from "react"
+import { BrowserRouter } from "react-router-dom"
 
 export default function Main() {
     const [userFound, setUserFound] = useState([])
-
     async function onSubmit(e) {
       e.preventDefault()
-      const hasUser = await (await fetch('http://localhost:4000/find_user?email=liu.david@northeastern.edu')).json()
+      const hasUser = await (await fetch('http://localhost:4000/find_user?email=dong.nelson@northeastern.edu')).json()
       if (hasUser.count === 1){
-        const hasReviews = await (await fetch('http://localhost:4000/find_reviews?email=liu.david@northeastern.edu')).json()
+        const hasReviews = await (await fetch('http://localhost:4000/find_reviews?email=dong.nelson@northeastern.edu')).json()
         setUserFound(hasReviews)
       }
       else {
-        window.location.href = '/errorpg.html'
+        
       }
       
     }

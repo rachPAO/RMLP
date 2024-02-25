@@ -10,13 +10,8 @@ export default function Form() {
           <label form="raterEmail">Rater Email:</label>
           <input type="email" id="raterEmail" name="raterEmail" required />
     
-          <label form="classLab">Class/Lab:</label>
+          <label form="classLab">Class Code:</label>
           <input type="text" id="classLab" name="classLab" required />
-    
-          <label form="Year">What year were you partners?</label>
-          <input type="number" id="year" name="year" required />
-          <label form="emester">What semester were you partners?</label>
-          <input type="number" id="semester" name="semester" min="1" max="2" required />
     
           <h4>Rate on a scale of 1 to 5. 1 being the lowest and 5 being the highest.</h4>
           <label for="rating">Quality</label>

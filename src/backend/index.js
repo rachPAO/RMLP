@@ -21,7 +21,7 @@ app.get('/find_user', (req, res) => {
 //Route to fetch review data from review DB  (another get EP)
 app.get('/find_reviews', (req, res) => {
   const x = req.query.email
-  const find_reviews = `SELECT comments FROM review WHERE reviewee = '${x}'`;
+  const find_reviews = `SELECT comments FROM review WHERE reviewee = 'dong.nelson@northeastern.edu';`;
   db.all(find_reviews,[], (err, result) => {
     if (err) {
       throw err;

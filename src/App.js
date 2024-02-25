@@ -11,3 +11,20 @@ function App() {
 }
 
 export default App;
+
+
+// const { checkEmailExists } = require('./find-user');
+// const email = 'example@example.com';
+
+// checkEmailExists(email, (err, exists) => {
+//   if (err) {
+//     console.error('Error checking email:', err);
+//     return;
+//   }
+//   if (exists) {
+//     console.log('Email exists in the database');
+//   } else {
+//     console.error('Email does not exist in the database');
+//     // Throw an error or handle it as needed
+//   }
+// });
